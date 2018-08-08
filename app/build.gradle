@@ -20,7 +20,7 @@ android {
     compileSdkVersion 27
     buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "com.random.pickyourown"
+        applicationId "com.agld.mw"
         minSdkVersion 18
         targetSdkVersion 26
         versionCode 1

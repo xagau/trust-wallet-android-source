@@ -24,6 +24,8 @@ public class TrustWalletTickerService implements TickerService {
     private final Gson gson;
     private ApiClient apiClient;
 
+    private static final String TRUST_API_URL = "https://api.trustwalletapp.com";
+
     public TrustWalletTickerService(
             OkHttpClient httpClient,
             Gson gson) {
