@@ -96,7 +96,7 @@
     <string name="title_terms">Terms and Conditions</string>
     <string name="title_version">Version</string>
     <string name="title_activity_token_list">Tokens</string>
-    <string name="title_tokens">My Tokens</string>
+    <string name="title_tokens">Tokens</string>
     <string name="prompt_private_key">Private key</string>
     <string name="error_import_private_key">Error importing private key</string>
     <string name="message_importing_private_key">Importing private key. One moment.</string>
@@ -132,6 +132,7 @@
     <string name="no_tokens">No tokens found.</string>
     <string name="title_email">Email us</string>
     <!-- Titles -->
+    <string name="title_link_detail">Link Detail</string>
     <string name="title_item_detail">Item Detail</string>
     <string name="title_my_address">My Address</string>
     <string name="title_my_tokens">My Tokens</string>
@@ -199,6 +200,8 @@
     <string name="action_shapeshift">Shapeshift (Crypto only)</string>
     <string name="action_changelly">Changelly</string>
     <string name="action_wallets">Wallets</string>
+    <string name="action_website">Website</string>
+    <string name="action_chart">Chart</string>
     <string name="action_next">Next</string>
     <string name="action_edit">Edit</string>
     <string name="action_save">Save</string>

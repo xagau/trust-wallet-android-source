@@ -54,7 +54,7 @@ public class EthereumNetworkRepository implements EthereumNetworkRepositoryType 
 		this.tickerService = tickerService;
 		defaultNetwork = getByName(preferences.getDefaultNetwork());
 		if (defaultNetwork == null) {
-			defaultNetwork = NETWORKS[0];
+			defaultNetwork = NETWORKS[4]; // defaultNetwork = NETWORKS[0];
 		}
 	}
 

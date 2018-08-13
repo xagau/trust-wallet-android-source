@@ -10,6 +10,7 @@
             android:title="@string/action_wallets"
             />
 
+
         <ListPreference
             android:key="pref_rpcServer"
             android:title="@string/network_label"
@@ -19,18 +20,34 @@
         <PreferenceCategory
             android:title="@string/title_opensource"
             android:key="pref_opensource_links" >
+            <Preference
 
+                android:icon="@mipmap/settings_website"
+                android:title="@string/action_website">
+                <intent android:action="android.intent.action.VIEW"
+                    android:data="https://www.anthemgold.com" />
+
+            </Preference>
+
+            <Preference
+
+                android:icon="@mipmap/settings_chart"
+                android:title="@string/action_chart">
+                <intent android:action="android.intent.action.VIEW"
+                    android:data="https://chart.anthemgold.com/service-1.0-SNAPSHOT/index-n.jsp?symbol=XAU" />
+
+            </Preference>
             <Preference
                 android:title="@string/title_source_code"
                 android:icon="@mipmap/settings_open_source">
                 <intent android:action="android.intent.action.VIEW"
-                    android:data="https://github.com/TrustWallet/trust-wallet-android" />
+                    android:data="https://github.com/xagau/trust-wallet-android" />
             </Preference>
 
             <Preference android:title="@string/title_report_bug"
                         android:icon="@mipmap/settings_bug">
                 <intent android:action="android.intent.action.VIEW"
-                    android:data="https://github.com/TrustWallet/trust-wallet-android/issues/new" />
+                    android:data="https://github.com/xagau/trust-wallet-android-source/issues/new" />
             </Preference>
 
         </PreferenceCategory>
@@ -50,13 +67,16 @@
                 android:title="@string/telegram"
                 android:icon="@mipmap/settings_telegram">
                 <intent android:action="android.intent.action.VIEW"
-                    android:data="https://t.me/joinchat/AAMtrQ_wtd918mm_mU0BRQ" />
+                    android:data="https://t.me/anthemgold" />
             </Preference>
 
             <Preference
                 android:key="pref_facebook"
                 android:title="@string/facebook"
                 android:icon="@drawable/ic_facebook">
+                <!-- <intent android:action="android.intent.action.VIEW"
+                    android:data="https://www.facebook.com/AnthemGold"/> -->
+
 
             </Preference>
         </PreferenceCategory>
@@ -66,6 +86,7 @@
             android:key="pref_support"
             >
 
+            <!--
             <Preference
                 android:key="pref_rate"
                 android:icon="@mipmap/settings_rating"
@@ -81,19 +102,20 @@
                 android:icon="@mipmap/settings_donate"
                 android:title="@string/title_donate">
             </Preference>
+             -->
 
             <Preference
                 android:title="@string/title_privacy_policy"
                 android:icon="@mipmap/settings_privacy_policy">
                 <intent android:action="android.intent.action.VIEW"
-                    android:data="https://trustwalletapp.com/privacy-policy.html" />
+                    android:data="https://www.anthemgold.com/www.anthemgold.com/policy" />
             </Preference>
 
             <Preference
                 android:title="@string/title_terms"
                 android:icon="@mipmap/settings_terms">
                 <intent android:action="android.intent.action.VIEW"
-                    android:data="https://trustwalletapp.com/terms.html" />
+                    android:data="https://www.anthemgold.com/www.anthemgold.com/tos" />
             </Preference>
 
             <Preference

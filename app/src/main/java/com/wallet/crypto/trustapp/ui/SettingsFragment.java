@@ -57,6 +57,7 @@ public class SettingsFragment extends PreferenceFragment
                     wallets.setSummary(wallet.address);
                 });
 
+        try {
         final ListPreference listPreference = (ListPreference) findPreference("pref_rpcServer");
         // THIS IS REQUIRED IF YOU DON'T HAVE 'entries' and 'entryValues' in your XML
         setRpcServerPreferenceData(listPreference);
@@ -76,51 +77,61 @@ public class SettingsFragment extends PreferenceFragment
             rateThisApp();
             return false;
         });
+    } catch(Exception e){}
 
-        final Preference twitter = findPreference("pref_twitter");
-        twitter.setOnPreferenceClickListener(preference -> {
-            Intent intent;
-            try {
-                // get the Twitter app if possible
-                getActivity().getPackageManager().getPackageInfo("com.twitter.android", 0);
-                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?user_id=911011433147654144"));
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            } catch (Exception e) {
-                // no Twitter app, revert to browser
-                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/trustwalletapp"));
-            }
-            startActivity(intent);
-            return false;
-        });
+
+        try {
+            final Preference twitter = findPreference("pref_twitter");
+            twitter.setOnPreferenceClickListener(preference -> {
+                Intent intent;
+                try {
+                    // get the Twitter app if possible
+                    getActivity().getPackageManager().getPackageInfo("com.twitter.android", 0);
+                    intent = new Intent(Intent.ACTION_VIEW, Uri.parse("twitter://user?user_id=anthemgold"));
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                } catch (Exception e) {
+                    // no Twitter app, revert to browser
+                    intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/anthemgold"));
+                }
+                startActivity(intent);
+                return false;
+            });
+        } catch(Exception e){}
 
         final Preference facebook = findPreference("pref_facebook");
         facebook.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/trustwalletapp"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/AnthemGold"));
             startActivity(intent);
             return false;
         });
 
-        final Preference donate = findPreference("pref_donate");
-        donate.setOnPreferenceClickListener(preference -> {
-            Intent intent = new Intent(getActivity(), SendActivity.class);
-            intent.putExtra(C.EXTRA_ADDRESS, C.DONATION_ADDRESS);
-            startActivity(intent);
-            return true;
-        });
 
-        final Preference email = findPreference("pref_email");
-        email.setOnPreferenceClickListener(preference -> {
+        try {
+            final Preference donate = findPreference("pref_donate");
+            donate.setOnPreferenceClickListener(preference -> {
+                Intent intent = new Intent(getActivity(), SendActivity.class);
+                intent.putExtra(C.EXTRA_ADDRESS, C.DONATION_ADDRESS);
+                startActivity(intent);
+                return true;
+            });
+        } catch(Exception ex) { }
 
-            Intent mailto = new Intent(Intent.ACTION_SENDTO);
-            mailto.setType("message/rfc822"); // use from live device
-            mailto.setData(Uri.parse("mailto:support@trustwalletapp.com")
-                    .buildUpon()
-                    .appendQueryParameter("subject", "Android support question")
-                    .appendQueryParameter("body", "Dear Trust support,")
-                    .build());
-            startActivity(Intent.createChooser(mailto, "Select email application."));
-            return true;
-        });
+        try {
+            final Preference email = findPreference("pref_email");
+            email.setOnPreferenceClickListener(preference -> {
+
+                Intent mailto = new Intent(Intent.ACTION_SENDTO);
+                mailto.setType("message/rfc822"); // use from live device
+                mailto.setData(Uri.parse("mailto:support@anthemgold.com")
+                        .buildUpon()
+                        .appendQueryParameter("subject", "Android support question")
+                        .appendQueryParameter("body", "Dear Anthem Gold support,")
+                        .build());
+                startActivity(Intent.createChooser(mailto, "Select email application."));
+                return true;
+            });
+
+        } catch(Exception ex) {}
     }
 
     private void rateThisApp() {

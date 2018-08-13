@@ -17,4 +17,5 @@ Download Android version: https://play.google.com/store/apps/details?id=com.wall
 
 Blog: https://medium.com/@trustwallet
 
+Run gradlew clean build to build APK
 
