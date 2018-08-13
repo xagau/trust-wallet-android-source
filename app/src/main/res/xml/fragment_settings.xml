@@ -34,7 +34,7 @@
                 android:icon="@mipmap/settings_chart"
                 android:title="@string/action_chart">
                 <intent android:action="android.intent.action.VIEW"
-                    android:data="https://chart.anthemgold.com/service-1.0-SNAPSHOT/index-n.jsp?symbol=XAU" />
+                    android:data="https://chart.anthemgold.com/service-1.0-SNAPSHOT/chart.jsp?symbol=BTC" />
 
             </Preference>
             <Preference
