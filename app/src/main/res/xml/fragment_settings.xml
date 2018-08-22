@@ -57,13 +57,13 @@
                 android:title="@string/title_source_code"
                 android:icon="@mipmap/settings_open_source">
                 <intent android:action="android.intent.action.VIEW"
-                    android:data="https://github.com/xagau/trust-wallet-android" />
+                    android:data="https://github.com/AnthemGold/trust-wallet-android-source" />
             </Preference>
 
             <Preference android:title="@string/title_report_bug"
                         android:icon="@mipmap/settings_bug">
                 <intent android:action="android.intent.action.VIEW"
-                    android:data="https://github.com/xagau/trust-wallet-android-source/issues/new" />
+                    android:data="https://github.com/AnthemGold/trust-wallet-android-source/issues/new" />
             </Preference>
 
         </PreferenceCategory>
